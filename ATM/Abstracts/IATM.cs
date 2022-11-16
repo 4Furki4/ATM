@@ -12,9 +12,13 @@ namespace ATM.Abstracts
 
         public List<ILog> Logs { get; set; }
 
+        public List<IUser> Users { get; set; }
+
         public void Deposit(decimal amount);
 
         public void Withdraw(decimal amount);
+
+        public void Transfer(string IBAN, decimal amount);
 
         public void Pay_Bill(IBill bill, decimal amount);
 
